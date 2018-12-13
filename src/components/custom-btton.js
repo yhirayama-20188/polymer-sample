@@ -18,17 +18,25 @@ class CustomButton extends PolymerElement {
                     background-color: var(--app-primary-color, blue);
                     transition: all .2s ease-in-out;
                 }
-                button:hover {
-                    background-color: #fff;
-                    color: var(--app-primary-color, blue);
-                    border-color: var(--app-primary-color, blue);
+                :host([clicked]) button {
+                background-color: #666;
+                }
+                :host([clicked]) button:hover {
+                background-color: #666;
+                color: #fff;
                 }
             </style>
-            <button type$="[[button]]" name="button">[[buttonText]]</button>
+            <button type$="[[buttonType]]" name="button">[[buttonText]]</button>
         `;
     }
     static get properties() {
         return {
+            clicked: {
+                type: Boolean,
+                value: false,
+                notify: true,
+                reflectToAttribute: true
+            },
             buttonText: {
                 type: String
             },
@@ -39,6 +47,10 @@ class CustomButton extends PolymerElement {
     }
     constructor() {
         super();
+        this.addEventListener('click', this.toggle.bind(this));
+    }
+    toggle() {
+        this.clicked = !this.clicked;
     }
 }
 customElements.define('custom-button', CustomButton);

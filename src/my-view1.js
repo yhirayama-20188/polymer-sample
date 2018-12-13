@@ -12,6 +12,7 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import './components/custom-btton';
 import './custom-card';
+import './image-card';
 
 class MyView1 extends PolymerElement {
   static get template() {
@@ -24,14 +25,25 @@ class MyView1 extends PolymerElement {
       </style>
 
       <custom-card>
-        <div class="circle">1</div>
-        <h1>View One</h1>
+        <div class="circle">1.1</div>
+        <h1>エトーシャ国立公園 ナミビア とは</h1>
         <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
         <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
-        <custom-button 
-          button-text="Click Me!" 
+        <custom-button
+          button-text="Click Me!"
           button-type="button"></custom-button>
       </custom-card>
+
+      <image-card>
+        <custom-card>
+          <div class="circle">1.2</div>
+          <h1>View One-2</h1>
+          <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
+          <custom-button
+            button-text="Click Me!"
+            button-type="button"></custom-button>
+        </custom-card>
+      </imgae-card>
     `;
   }
 }

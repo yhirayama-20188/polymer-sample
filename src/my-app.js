@@ -36,7 +36,7 @@ class MyApp extends PolymerElement {
     return html`
       <style>
         :host {
-          --app-primary-color: #4285f4;
+          --app-primary-color: #004098;
           --app-secondary-color: black;
 
           display: block;
@@ -84,10 +84,11 @@ class MyApp extends PolymerElement {
         <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
           <app-toolbar>Menu</app-toolbar>
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-            <a name="view1" href="[[rootPath]]view1">View One</a>
-            <a name="view2" href="[[rootPath]]view2">View Two</a>
-            <a name="view3" href="[[rootPath]]view3">View Three</a>
-            <a name="new-view" href="[[rootPath]]new-view">New View</a>
+            <a name="view1" href="[[rootPath]]view1">View Oneとは？</a>
+            <a name="view2" href="[[rootPath]]view2">ライブラリー</a>
+            <a name="view3" href="[[rootPath]]view3">行き方</a>
+            <a name="new-view" href="[[rootPath]]new-view">ホテル</a>
+            <a name="reference-view" href="[[rootPath]]reference-view">参考</a>
           </iron-selector>
         </app-drawer>
 
@@ -97,7 +98,7 @@ class MyApp extends PolymerElement {
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-              <div main-title="">My App</div>
+              <div main-title="">タイトル　～View One編～</div>
             </app-toolbar>
           </app-header>
 
@@ -106,6 +107,7 @@ class MyApp extends PolymerElement {
             <my-view2 name="view2"></my-view2>
             <my-view3 name="view3"></my-view3>
             <my-new-view name="new-view"></my-new-view>
+            <my-reference-view name="reference-view"></my-reference-view>
             <my-view404 name="view404"></my-view404>
           </iron-pages>
         </app-header-layout>
@@ -138,7 +140,7 @@ class MyApp extends PolymerElement {
      // Show 'view1' in that case. And if the page doesn't exist, show 'view404'.
     if (!page) {
       this.page = 'view1';
-    } else if (['view1', 'view2', 'view3', 'new-view'].indexOf(page) !== -1) {
+    } else if (['view1', 'view2', 'view3', 'new-view', 'reference-view'].indexOf(page) !== -1) {
       this.page = page;
     } else {
       this.page = 'view404';
@@ -167,6 +169,9 @@ class MyApp extends PolymerElement {
         break;
       case 'new-view':
         import('./my-new-view.js');
+        break;
+      case 'reference-view':
+        import('./my-reference-view.js');
         break;
       case 'view404':
         import('./my-view404.js');

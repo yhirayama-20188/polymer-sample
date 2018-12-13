@@ -15,6 +15,18 @@ import './custom-card';
 import './image-card';
 
 class MyView1 extends PolymerElement {
+  static get properties() {
+    return {
+      data: {
+        type: Object,
+        value: function() {
+          return {
+            place: "エトーシャ国立公園 ナミビア"
+          };
+        }
+      }
+    };
+  }
   static get template() {
     return html`
       <style include="shared-styles">
@@ -26,7 +38,7 @@ class MyView1 extends PolymerElement {
 
       <custom-card>
         <div class="circle">1.1</div>
-        <h1>エトーシャ国立公園 ナミビア とは</h1>
+        <h1>{{data.place}} とは</h1>
         <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
         <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
         <custom-button

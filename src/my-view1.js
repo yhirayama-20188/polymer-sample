@@ -11,6 +11,7 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import './components/custom-btton';
+import './custom-card';
 
 class MyView1 extends PolymerElement {
   static get template() {
@@ -22,7 +23,7 @@ class MyView1 extends PolymerElement {
         }
       </style>
 
-      <div class="card">
+      <custom-card>
         <div class="circle">1</div>
         <h1>View One</h1>
         <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
@@ -30,7 +31,7 @@ class MyView1 extends PolymerElement {
         <custom-button 
           button-text="Click Me!" 
           button-type="button"></custom-button>
-      </div>
+      </custom-card>
     `;
   }
 }

@@ -29,12 +29,9 @@ class MyReferenceView extends PolymerElement {
         <h1>Wikipedia</h1>
         <ul>
             <li><a href="https://ja.wikipedia.org/wiki/Category:%E3%83%8A%E3%83%9F%E3%83%93%E3%82%A2%E3%81%AE%E5%9B%BD%E7%AB%8B%E5%85%AC%E5%9C%92">Category:ナミビアの国立公園</li>
-            <li><a href=""></li>
-        </ul>><a href=""></li>
         </ul>
       </custom-card>
-
-    `;
+      `;
     }
 }
 

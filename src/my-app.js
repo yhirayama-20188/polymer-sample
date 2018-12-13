@@ -22,6 +22,7 @@ import '@polymer/iron-pages/iron-pages.js';
 import '@polymer/iron-selector/iron-selector.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import './my-icons.js';
+import './data-view.js';
 
 // Gesture events like tap and track generated from touch will not be
 // preventable, allowing for better scrolling performance.
@@ -84,7 +85,7 @@ class MyApp extends PolymerElement {
         <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
           <app-toolbar>Menu</app-toolbar>
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-            <a name="view1" href="[[rootPath]]view1">View Oneとは？</a>
+            <a name="view1" href="[[rootPath]]view1"><data-view></data-view> とは？</a>
             <a name="view2" href="[[rootPath]]view2">ライブラリー</a>
             <a name="view3" href="[[rootPath]]view3">行き方</a>
             <a name="new-view" href="[[rootPath]]new-view">ホテル</a>
@@ -98,7 +99,7 @@ class MyApp extends PolymerElement {
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-              <div main-title="">タイトル　～View One編～</div>
+              <div main-title="">タイトル　～ <data-view></data-view> 編 ～</div>
             </app-toolbar>
           </app-header>
 

@@ -14,9 +14,13 @@ class CustomButton extends PolymerElement {
                     padding: .5rem 1rem;
                     font-size: 1rem;
                     border-radius: .25rem;
-                    color: #fff;
                     background-color: var(--app-primary-color, blue);
                     transition: all .2s ease-in-out;
+                }
+                button a {
+                    color: #fff;
+                    text-decoration: none;
+                    display: block;
                 }
                 :host([clicked]) button {
                 background-color: #666;
@@ -26,7 +30,7 @@ class CustomButton extends PolymerElement {
                 color: #fff;
                 }
             </style>
-            <button type$="[[buttonType]]" name="button">[[buttonText]]</button>
+            <button type$="[[buttonType]]" name="button"><a href="#">[[buttonText]]</a></button>
         `;
     }
     static get properties() {

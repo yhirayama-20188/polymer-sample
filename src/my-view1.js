@@ -14,20 +14,9 @@ import './components/custom-btton';
 import './custom-card';
 import './image-card';
 import './data-view';
+import './data-title';
 
 class MyView1 extends PolymerElement {
-  static get properties() {
-    return {
-      data: {
-        type: Object,
-        value: function() {
-          return {
-            place: "エトーシャ国立公園 ナミビア"
-          };
-        }
-      }
-    };
-  }
   static get template() {
     return html`
       <style include="shared-styles">
@@ -45,6 +34,7 @@ class MyView1 extends PolymerElement {
         <custom-button
           button-text="Click Me!"
           button-type="button"></custom-button>
+        <x-custom></x-custom>
       </custom-card>
 
       <image-card>

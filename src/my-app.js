@@ -37,7 +37,7 @@ class MyApp extends PolymerElement {
     return html`
       <style>
         :host {
-          --app-primary-color: #004098;
+          --app-primary-color: #a7dbd8;
           --app-secondary-color: black;
 
           display: block;
@@ -88,7 +88,7 @@ class MyApp extends PolymerElement {
             <a name="view1" href="[[rootPath]]view1"><data-view></data-view> とは？</a>
             <a name="view2" href="[[rootPath]]view2">ライブラリー</a>
             <a name="view3" href="[[rootPath]]view3">行き方</a>
-            <a name="new-view" href="[[rootPath]]new-view">ホテル</a>
+            <a name="new-view" href="[[rootPath]]new-view">プラン</a>
             <a name="reference-view" href="[[rootPath]]reference-view">参考</a>
           </iron-selector>
         </app-drawer>

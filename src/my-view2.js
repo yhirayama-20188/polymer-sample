@@ -25,9 +25,6 @@ class MyView2 extends PolymerElement {
           -ms-flex-flow: row wrap;
                   flex-flow: row wrap;
         }
-        .library-card {
-            background-image: url(https://www.his-j.com/smp/test/images/ex01.jpg);
-        }
       </style>
 
       <library-card></library-card>

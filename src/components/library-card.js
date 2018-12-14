@@ -1,8 +1,23 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import '@polymer/polymer/lib/elements/dom-repeat.js';
 
 class LibraryCard extends PolymerElement {
     static get is() {
         return 'library-card';
+    }
+    static get properties() {
+        return {
+            images: {
+                type: Array,
+                value() {
+                    return [
+                        { src: 'https://www.his-j.com/smp/test/images/ex01.jpg'},
+                        { src: 'https://www.his-j.com/smp/test/images/ex01.jpg'},
+                        { src: 'https://www.his-j.com/smp/test/images/ex01.jpg'}
+                    ];
+                }
+            }
+        };
     }
     static get template() {
         return html`
@@ -24,7 +39,6 @@ class LibraryCard extends PolymerElement {
                 width: 100%;
                 border-radius: 5px;
                 background-color: #fff;
-                background-image: url(https://www.his-j.com/smp/test/images/ex01.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
                 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
@@ -33,7 +47,9 @@ class LibraryCard extends PolymerElement {
             }
         </style>
 
-        <div class="library-card">ライブラリーカード</div>
+        <template is="dom-repeat" items="{{images}}">
+            <div class="library-card" style="background-image: url([[item.src]])"><br/># [[index]]</div>
+        </template>
         `;
     }
     constructor() {

@@ -31,10 +31,6 @@ class MyView2 extends PolymerElement {
       </style>
 
       <library-card></library-card>
-      <library-card></library-card>
-      <library-card></library-card>
-      <library-card></library-card>
-      <library-card></library-card>
     `;
   }
 }

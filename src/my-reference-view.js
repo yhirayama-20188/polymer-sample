@@ -11,8 +11,8 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import './components/custom-btton';
-import './custom-card';
-import './image-card';
+import './components/custom-card';
+import './components/image-card';
 
 class MyReferenceView extends PolymerElement {
     static get template() {

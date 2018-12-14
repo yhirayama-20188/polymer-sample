@@ -10,7 +10,7 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
-import './library-card';
+import './components/library-card';
 
 class MyView2 extends PolymerElement {
   static get template() {

@@ -11,10 +11,9 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import './components/custom-btton';
-import './custom-card';
-import './image-card';
-import './data-view';
-import './data-title';
+import './components/custom-card';
+import './components/image-card';
+import './components/data-view';
 
 class MyView1 extends PolymerElement {
   static get template() {

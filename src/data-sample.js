@@ -24,11 +24,15 @@ class DataSample extends PolymerElement {
     }
 
     _fullName() {
-        return `${this.first}, ${this.last} ${new Date()}`;
+        var textcolor = `${this.textcolor}`;
+        var first = `${this.first}`;
+        var last = `${this.last}`;
+        return [textcolor, first, last];
+        //return `${this.first}, ${this.last} ${new Date()}`;
     }
 
     static get template() {
-        return html`[[_fullName()]]`;
+        return html`<div style$="color: {{textcolor}}">[[_fullName()]]</div>`;
     }
 }
 

@@ -1,6 +1,9 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 
 class LibraryCard extends PolymerElement {
+    static get is() {
+        return 'library-card';
+    }
     static get template() {
         return html`
         <style>

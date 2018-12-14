@@ -27,7 +27,8 @@ class DataView extends PolymerElement {
         // var place = `${this.place}`;
         // var country = `${this.country}`;
         // var textcolor = `${this.textcolor}`;
-        // return [place, country, textcolor];
+        // var ex_array = [];
+        // return ex_array = [place, country, textcolor];
         return `${this.place}, ${this.country}`;
     }
 

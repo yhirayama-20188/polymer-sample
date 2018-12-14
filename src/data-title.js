@@ -24,6 +24,9 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 // customElements.define('data-title', DataTitle);
 
 class XCustom extends PolymerElement {
+    static get is() {
+        return 'x-custom';
+    }
     static get properties() {
         return {
             given: "John",

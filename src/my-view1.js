@@ -15,6 +15,7 @@ import './custom-card';
 import './image-card';
 import './data-view';
 import './data-title';
+import './data-sample';
 
 class MyView1 extends PolymerElement {
   static get template() {
@@ -28,13 +29,13 @@ class MyView1 extends PolymerElement {
 
       <custom-card>
         <div class="circle">1.1</div>
-        <h1><data-view></data-view> とは</h1>
+        <h1><data-view></data-view></h1>
+        <p><data-sample></data-sample></p>
         <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
         <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
         <custom-button
           button-text="Click Me!"
           button-type="button"></custom-button>
-        <x-custom></x-custom>
       </custom-card>
 
       <image-card>

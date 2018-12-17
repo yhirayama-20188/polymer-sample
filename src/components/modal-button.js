@@ -53,12 +53,9 @@ class ModalButton extends PolymerElement {
                 background-color: #666;
                 color: #fff;
                 }
-                .modal-conts {
-                    z-index: 2;
-                }
             </style>
             <div id="modal-box">
-                <button type$="[[buttonType]]" name="button" on-click="openModal">[[buttonText]]
+                <button type$="[[buttonType]]" name="button" on-click="handleModal">[[buttonText]]
                     <slot></slot>
                 </button>
             </div>
@@ -67,7 +64,7 @@ class ModalButton extends PolymerElement {
     constructor() {
         super();
     }
-    openModal() {
+    handleModal() {
         this.clicked = !this.clicked;
         const modal_conts = document.createElement("div");
         modal_conts.id = "modal-conts"

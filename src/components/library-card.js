@@ -35,6 +35,9 @@ class LibraryCard extends PolymerElement {
                 width: 100%;
                 margin: 0 3%;
             }
+            :host([clicked]) .library-card {
+                background-color: #666;
+            }
             .library-card {
                 width: 48.5%;
                 height: 40vh;
@@ -63,7 +66,11 @@ class LibraryCard extends PolymerElement {
         </style>
 
         <template is="dom-repeat" items="{{images}}">
-            <div class="library-card" style="background-image: url([[item.src]])"><br/># [[index]]</div>
+            <div class="library-card" style="background-image: url([[item.src]])">
+                <modal-button
+                    button-text="This is Modal"
+                    button-type="button" on-click="modal"># [[index]]</modal-button>
+            </div>
         </template>
         `;
     }

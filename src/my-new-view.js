@@ -10,7 +10,7 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
-import './components/custom-btton';
+import './components/custom-button';
 import './components/custom-card';
 
 class MyNewView extends PolymerElement {

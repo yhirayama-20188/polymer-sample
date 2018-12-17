@@ -11,6 +11,7 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import './components/library-card';
+import './components/modal-button';
 
 class MyView2 extends PolymerElement {
   static get template() {
@@ -27,7 +28,8 @@ class MyView2 extends PolymerElement {
         }
       </style>
 
-      <library-card></library-card>
+      <library-card>
+      </library-card>
     `;
   }
 }

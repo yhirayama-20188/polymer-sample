@@ -18,7 +18,7 @@ class DataView extends PolymerElement {
             },
             textcolor: {
                 type: String,
-                value: 'green'
+                value: 'navy'
             }
         };
     }

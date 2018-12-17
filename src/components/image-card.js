@@ -11,7 +11,7 @@ class ImageCard extends PolymerElement {
                 margin: 24px;
                 border-radius: 5px;
                 background-color: #fff;
-                background-image: url(https://www.his-j.com/smp/test/images/ex01.jpg);
+                background-image:url(https://www.his-j.com/smp/test/images/ex01.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
                 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);

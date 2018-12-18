@@ -10,7 +10,9 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
-import './components/custom-modal.js';
+import './components/custom-card';
+import './components/custom-modal';
+import '../../good-map.js'
 
 class MyView3 extends PolymerElement {
   static get template() {
@@ -21,6 +23,10 @@ class MyView3 extends PolymerElement {
 
           padding: 10px;
         }
+        good-map {
+          display: block;
+          height: 400px;
+        }
       </style>
 
       <div class="card">
@@ -28,15 +34,11 @@ class MyView3 extends PolymerElement {
         <h1>View Three</h1>
         <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
         <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
-
-        <button onclick="backdrop.open()">Plain overlay</button>
-        <sample-element id="backdrop" tabindex="-1">
-          <h2>Hello world!</h2>
-          <p>This can be closed by pressing the ESC key too.</p>
-          <button onclick="plain.close()">Close</button>
-        </sample-element>
-
       </div>
+
+      <custom-card>
+        <good-map api-key="AIzaSyAQuo91bcoB-KwWXaANroTrzpNZRFcNJ1k"></good-map>
+      </custom-card>
     `;
   }
 }

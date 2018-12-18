@@ -11,6 +11,7 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import './components/custom-card';
+import './components/custom-button';
 import './components/custom-modal';
 import '../../good-map.js'
 
@@ -29,15 +30,33 @@ class MyView3 extends PolymerElement {
         }
       </style>
 
-      <div class="card">
+      <custom-card>
         <div class="circle">3</div>
-        <h1>View Three</h1>
-        <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
-        <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
-      </div>
+        <h1>行き方</h1>
+        <h2>どこにある？</h2>
+        <p>ウィントフック</p>
+        <p>ウィントフック（アフリカーンス語: Windhoek）は、ナミビアの首都[3]。ドイツ語読みのヴィントフック (Windhuk) と表記されることもある。ナマ語ではǀAiǁgams、ヘレロ語ではOtjomuiseという。(Wikipediaより)</p>
+        <good-map api-key="AIzaSyAQuo91bcoB-KwWXaANroTrzpNZRFcNJ1k"></good-map>
+      </custom-card>
 
       <custom-card>
-        <good-map api-key="AIzaSyAQuo91bcoB-KwWXaANroTrzpNZRFcNJ1k"></good-map>
+        <h2>フライトルート</h2>
+        <p>成田 or 羽田空港　⇒（ドーハ乗り継ぎ）⇒　ウィントフック</p>
+        <p>・カタール航空。直行便はないのでカタール航空を利用した場合は、ドーハ乗り継ぎとなる。航空会社の格付け調査を行なう英国のスカイトラックスでは、2018年の世界のベストエアライン「エアライン・オブ・ザ・イヤー2018」においてカタール航空を2位と順位付けしているためサービス面では心配いらないだろう。</p>
+        <custom-button
+          button-text="カタール航空利用・ウィントフック行き航空券を検索"
+          button-type="button"></custom-button>
+        <p>アフリカの他の国にも行ってみたいという人はケープタウン（南アフリカ）経由のルートも考えられる。</p>
+        <p>成田 or 羽田空港　⇒　ケープタウン　⇒　ウィントフック</p>
+        <p>上のルートで検索すると上手く検索結果が返ってこないので下のように取ればよい。</p>
+        <p>成田 or 羽田空港　⇔　ケープタウン</p>
+        <p>ケープタウン　⇔　ウィントフック</p>
+        <p>・ケープタウンまでは乗り継ぎが一回だとシンガポール航空、カタール航空、エミレーツ航空といった選択になるだろう。先に述べた「エアライン・オブ・ザ・イヤー2018」においてはシンガポール航空が1位、エミレーツ航空が4位となっている。乗り継ぎが2回以上になれば先に挙げたフライトよりも価格を抑えた便が見つかるかもしれません。</p>
+        <p>さらに安い方法を検討するならケープタウン　⇔　ウィントフック間をバスで移動することもできるが、予約代行はないので基本的に現地で個人での手配になるだろう。</p>
+      </custom-card>
+
+      <custom-card>
+        <h2>陸路（ウィントフック　⇔　エトーシャ国立公園）</h2>
       </custom-card>
     `;
   }

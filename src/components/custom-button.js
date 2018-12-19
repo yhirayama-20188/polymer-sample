@@ -16,6 +16,7 @@ class CustomButton extends PolymerElement {
                     border-radius: .25rem;
                     background-color: var(--app-primary-color, blue);
                     transition: all .2s ease-in-out;
+                    color: #fff;
                 }
                 button a {
                     color: #fff;
@@ -30,7 +31,7 @@ class CustomButton extends PolymerElement {
                 color: #fff;
                 }
             </style>
-            <button type$="[[buttonType]]" name="button"><a href="#">[[buttonText]]</a></button>
+            <button type$="[[buttonType]]" name="button">[[buttonText]]</button>
         `;
     }
     static get properties() {

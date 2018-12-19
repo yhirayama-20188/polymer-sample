@@ -25,7 +25,7 @@ class MyView2 extends PolymerElement {
           -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
                   flex-flow: row wrap;
-        }                
+        }
         #modal-conts {
           z-index: 2;
           width: 100%;
